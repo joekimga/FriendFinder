@@ -13,12 +13,18 @@ app.get("/", function(req,res) {
 
 app.get("/survey", function(req, res) {
 	res.sendfile(path.join(__dirname, '/app/public/survey.html'));
-})
+});
 
 
 
 
 // app.get("/api", apiRoutes, )  
+
+app.get("/api/friends", function(req, res) {
+	res.sendfile(path.join(__dirname, '/app/data/friends.js'));
+});
+
+
 
 
 app.listen(PORT, function() {
